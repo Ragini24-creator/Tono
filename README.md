@@ -43,5 +43,3 @@
   "rephrased": "I look forward to reconnecting with you at a mutually convenient time."
 }
 
-### License
-This project is licensed under the MIT License.
