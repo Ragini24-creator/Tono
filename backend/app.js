@@ -3,9 +3,11 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const helmet = require('helmet');
 const rateLimit = require('express-rate-limit')
+const cors = require("cors")
 const app = express();
 
 app.use(helmet());
+app.use(cors());
 
 const limiter = rateLimit({
     windowMs: 15 * 60 * 1000, // 15 minutes
