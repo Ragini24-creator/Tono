@@ -3,13 +3,16 @@
 
 **Tono** is an AI-powered RESTful API that rephrases any input text into different tones and styles—such as formal, casual, professional, friendly, and more. It's ideal for content creators, marketers, developers, and anyone looking to instantly enhance their writing style.
 
+> ⚠️ **Note:** This is a Minimum Viable Product (MVP).  
+> Currently, we're using a **fallback version** of the AI model for rephrasing to keep things lightweight and cost-efficient. In future versions, we plan to integrate more robust models and support dynamic tone expansion.
+
 ---
 
 ## 🚀 Features
 
 - 🔁 Rephrase any sentence or paragraph
 - 🎭 Supports multiple tones: Formal, Casual, Professional, Friendly, Assertive, etc.
-- 🧠 Powered by state-of-the-art NLP models (OpenAI API / Hugging Face Transformers)
+- 🧠 Powered by NLP models (OpenAI API / Hugging Face models — fallback version for MVP)
 - ⚡ Simple and easy-to-use API endpoints
 - 🌐 Cross-platform compatible
 
@@ -20,7 +23,7 @@
 - **Backend:** Node.js / Express
 - **AI Integration:** OpenAI GPT / Hugging Face Transformers
 - **Hosting:** Render (backend)
-- **Authentication (optional):** API key-based or JWT (future scope)
+- **Authentication (optional):** API key-based or JWT (planned)
 
 ---
 
@@ -36,11 +39,9 @@
   "tone": "formal"
 }
 
-🟦 Response
 {
   "rephrased": "I look forward to reconnecting with you at a mutually convenient time."
 }
 
-
-
-
+### License
+This project is licensed under the MIT License.
