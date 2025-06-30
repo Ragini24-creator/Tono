@@ -39,7 +39,7 @@
   "tone": "formal"
 }
 
-
+```json
 {
   "rephrased": "I look forward to reconnecting with you at a mutually convenient time."
 }
