@@ -27,20 +27,22 @@
 
 ---
 
-## 📦 API Endpoint
+### 📦 API Endpoint
 
 ### `POST /api/generate`
 
 #### 🟩 Request Body
-
 ```json
 {
   "text": "Let's catch up sometime!",
   "tone": "formal"
 }
+```
 
+#### 🟦 Response Body
 ```json
 {
   "rephrased": "I look forward to reconnecting with you at a mutually convenient time."
 }
+```
 
