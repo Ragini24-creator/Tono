@@ -1,10 +1,10 @@
 
 # Tono 📝✨
 
-**Tono** is an AI-powered RESTful API that rephrases any input text into different tones and styles—such as formal, casual, professional, friendly, and more. It's ideal for content creators, marketers, developers, and anyone looking to instantly enhance their writing style.
+**Tono** is an AI-powered a full-stack application that allows users to rephrases any input text into different tones and styles—such as formal, casual, professional, friendly, and more. It's ideal for content creators, marketers, developers, and anyone looking to instantly enhance their writing style.
 
 > ⚠️ **Note:** This is a Minimum Viable Product (MVP).  
-> Currently, we're using a **fallback version** of the AI model for rephrasing to keep things lightweight and cost-efficient. In future versions, we plan to integrate more robust models and support dynamic tone expansion.
+> Currently, I'm using a **fallback version** of the AI model for rephrasing to keep things lightweight and cost-efficient for MVP. In future versions, we plan to integrate more robust models and support dynamic tone expansion.
 
 ---
 
@@ -21,7 +21,7 @@
 ## 🔧 Tech Stack
 
 - **Backend:** Node.js / Express
-- **AI Integration:** OpenAI GPT / Hugging Face Transformers
+- **AI Integration:** OpenAI GPT / Hugging Face Transformers (Fallback logic currently in use while API integration is being finalized)
 - **Hosting:** Render (backend)
 - **Authentication (optional):** API key-based or JWT (planned)
 
@@ -46,3 +46,15 @@
 }
 ```
 
+## 🚧 Status
+- **Frontend and backend are deployed**
+- **Currently using a fallback version for rephrasing logic**
+- Hugging Face API integration is in progress — updates coming soon!
+
+## 📂 Project Structure
+frontend/ -> Frontend (React)
+backend/ -> Backend (Node + Express)
+
+
+## 📜 License
+This project is licensed under the MIT License — see the [LICENSE](./LICENSE) file for details.
