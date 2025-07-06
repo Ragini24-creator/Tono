@@ -1,5 +1,6 @@
 function rephraseWithTone(text, tone) {
-    const lowerText = text.toLowerCase().trim();
+    const originalText = text.trim();
+    const lowerText = originalText.toLowerCase();
 
     const toneMap = {
         formal: {
@@ -11,67 +12,81 @@ function rephraseWithTone(text, tone) {
             words: {
                 "task": "assignment",
                 "help": "assist",
-                "fix": "resolve"
+                "fix": "resolve",
+                "need": "require"
             }
         },
         friendly: {
             phrases: [
-                { match: "can you", replace: "hey! could you" },
-                { match: "soon", replace: "when you get a chance" }
+                { match: "can you", replace: "hey, could you" },
+                { match: "please", replace: "pretty please" },
+                { match: "soon", replace: "whenever you're free" }
             ],
             words: {
                 "task": "thing",
                 "help": "give me a hand",
-                "fix": "take a look at"
+                "fix": "take a look at",
+                "need": "could use"
             }
         },
         casual: {
             phrases: [
                 { match: "can you", replace: "mind just" },
+                { match: "please", replace: "plz" },
                 { match: "soon", replace: "real quick" }
             ],
             words: {
                 "task": "stuff",
                 "help": "help out",
-                "fix": "sort it"
+                "fix": "sort it",
+                "need": "need"
             }
         },
         sarcastic: {
-            intro: "Of course! I’ve been waiting my whole life just to ",
+            intro: "Oh sure, because I have *nothing* better to do than to",
             words: {
-                "task": "little world-ending problem",
-                "help": "perform miracles",
-                "fix": "wave your magic wand over"
+                "task": "life-threatening situation",
+                "help": "summon divine powers",
+                "fix": "magically solve everything"
             }
+        },
+        neutral: {
+            phrases: [],
+            words: {}
         }
     };
 
-    const rules = toneMap[tone.toLowerCase()];
-    if (!rules) return text;
+    const rules = toneMap[tone.toLowerCase()] || toneMap["neutral"];
 
-    // Special handling for sarcastic tone
+    // Sarcastic: humor and exaggeration
     if (tone.toLowerCase() === "sarcastic" && lowerText.startsWith("can you")) {
-        const restOfText = text.slice(8).trim(); // remove "can you"
-        const sarcasticResponse = `${rules.intro}${restOfText.replace(/[?!.]*$/, "")}!`;
-        return sarcasticResponse;
+        const rest = originalText.slice(8).trim();
+        const sarcasticText = rest.replace(/[?!.]*$/, "");
+        return `${rules.intro} ${sarcasticText}? 😂`;
     }
 
-    // General tone handling (formal, friendly, casual)
-    let rephrased = text;
-
-    // Apply phrase-based replacements
+    // Phrase substitutions
+    let rephrased = originalText;
     if (rules.phrases) {
-        rules.phrases.forEach(rule => {
-            rephrased = rephrased.replace(new RegExp(`${rule.match}(?=[\\s\\?\\.!]|$)`, "gi"), rule.replace);
+        rules.phrases.forEach(({ match, replace }) => {
+            rephrased = rephrased.replace(
+                new RegExp(`\\b${match}\\b`, "gi"),
+                replace
+            );
         });
     }
 
-    // Apply word-based substitutions
+    // Word substitutions
     if (rules.words) {
         Object.keys(rules.words).forEach(word => {
             const regex = new RegExp(`\\b${word}\\b`, "gi");
             rephrased = rephrased.replace(regex, rules.words[word]);
         });
+    }
+
+    // Ensure sentence ends with punctuation
+    if (!/[.?!]$/.test(rephrased.trim())) {
+        rephrased += ".";
     }
 
     // Capitalize first letter
