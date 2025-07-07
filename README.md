@@ -2,7 +2,7 @@
 📝 Tono — Text Rephraser (MVP)
 A full-stack web tool that allows users to rephrase input text in different tones — such as formal, casual, assertive, or professional. Built using the MERN stack, with optional OpenAI integration.
 
-⚠️ Note: This is an MVP version. AI integration is written but currently uses a fallback mode for demonstration which in most of cases might not give perfect result. The actual OpenAI-powered response can be enabled with your own API key. See instructions below.
+⚠️ Note: This is an MVP version. AI integration is written but currently uses a fallback mode for demonstration which in most of cases might not give perfect result. The actual OpenAI-powered/other AI powered response can be enabled with your own API key. See instructions below.
 
 
 ---
