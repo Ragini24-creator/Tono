@@ -1,5 +1,5 @@
 
-📝 Tono — Text Rephraser (MVP)
+## 📝 Tono — Text Rephraser (MVP)
 
 A full-stack web tool that allows users to rephrase input text in different tones — such as formal, casual, assertive, or professional. Built using the MERN stack, with optional OpenAI integration.
 
