@@ -61,10 +61,6 @@ If you'd like to see a real AI-powered output, just replace the fallback logic w
 }
 ```
 
-## 🚧 Status
-- **Frontend and backend are deployed**
-- **Currently using a fallback version for rephrasing logic**
-- Hugging Face API integration is in progress — updates coming soon!
 
 ## 📂 Project Structure
 frontend/ -> Frontend (React)
@@ -106,7 +102,7 @@ Comment out or remove the fallback code block.
 4. Restart the backend server:
    ```npm start```
 
-✅ Status
+## Status
 
 ✅ UI completed and responsive
 
