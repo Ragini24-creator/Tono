@@ -119,9 +119,10 @@ If you'd like to add tone styles, improve fallback quality, or build an async AI
 
 📬 Connect With Me 
 📖 [My Blogs on Medium](https://medium.com/@raginikishor5603)
+
 🔗 [LinkedIn](https://www.linkedin.com/in/ragini-kaushalkishor-751518302/)
 
-📖 My Blogs on Medium
+
 
 ## 📜 License
 This project is licensed under the MIT License — see the [LICENSE](./LICENSE) file for details.
