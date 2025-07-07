@@ -71,8 +71,8 @@ backend/ -> Backend (Node + Express)
 
 🚀 Running Locally
 ```# Clone the repository
-git clone https://github.com/yourusername/tono-rephraser.git
-cd tono-rephraser
+git clone https://github.com/yourusername/tono.git
+cd tono
 
 # Start backend
 cd backend
@@ -86,14 +86,18 @@ npm start
 ```
 
 🔑 How to Use Your Own OpenAI API Key
+
 The current version uses a fallback function to simulate tone rephrasing.
+
 To use real AI responses with your OpenAI key:
 
 1.Create a .env file in the backend/ folder.
+
 2. Add this line:
+   
 ```AI_API_KEY=your-api-key-here```
 
-3. In the backend/routes/ai.js file :
+4. In the backend/routes/ai.js file :
 
 Uncomment the AI logic block.
 
@@ -102,6 +106,7 @@ Comment out or remove the fallback code block.
    ```npm start```
 
 ✅ Status
+
 ✅ UI completed and responsive
 
 ⚠️ MVP fallback version live
@@ -111,10 +116,13 @@ Comment out or remove the fallback code block.
 🔜 Optional improvements: tone training, analytics, async queues   
 
 💻 Demo
+
 Live demo not included in README as it currently uses fallback logic. You can test locally or fork the project and integrate your own OpenAI key.
 
 🤝 Contributions
+
 Open to collaboration, feature ideas, or improvements!
+
 If you'd like to add tone styles, improve fallback quality, or build an async AI queue, feel free to open a PR.
 
 📬 Connect With Me 
